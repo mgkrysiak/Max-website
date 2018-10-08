@@ -72,7 +72,6 @@ header .menu::after {
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    padding-top: 50%;
   }
 
   .menu {
