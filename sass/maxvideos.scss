@@ -1,0 +1,37 @@
+@import "_variables.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@include bodyheader;
+
+@media (min-width: 601px) {
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+    justify-content: center;
+    margin: 5%;
+}
+
+/* Create four equal columns that sits next to each other */
+.column {
+       flex: 50%;
+       max-width: 45%;
+   }
+
+.column iframe {
+    margin-top: 12px;
+    vertical-align: middle;
+}
+}
+
+@media (max-width: 600px) {
+    .column {
+        flex: 100%;
+        max-width: 100%;
+    }
+}

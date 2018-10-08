@@ -1,0 +1,21 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+@import '_variables.scss';
+
+
+
+@include bodyheader;
+
+body {
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100vw;
+
+@media (min-width : 320px) and (max-width : 768px) {
+  background-position: center;
+}
+}

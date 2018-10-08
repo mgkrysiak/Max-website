@@ -1,0 +1,86 @@
+$mainColor: black;
+$fontColor: #c7d4e8;
+$fontSize: 2.0em;
+$backgroundBlack: black;
+$fontEverything:'Roboto Mono', monospace;
+
+@mixin links {
+  a {
+   color: $fontColor;
+   text-decoration: none;
+  }
+    a:visited {
+      text-decoration: none;
+      color: white;
+    }
+    a:hover {
+      text-decoration: none;
+      font-weight: bold;
+    }
+}
+
+@mixin clearfix {
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin bodyheader {
+
+  body {
+  background-color: $backgroundBlack;
+  font-family: $fontEverything;
+  font-size: $fontSize;
+}
+
+  header {
+    background-color: none;
+    margin: 20px;
+    font-weight: lighter;
+
+
+
+      #logo {
+      float: left;
+      color: $fontColor;
+      text-transform: uppercase;
+      @include links;
+  }
+      @include clearfix;
+
+      .menu {
+        float: right;
+        color: $fontColor;
+
+              li {
+            display: inline;
+            margin: 20px;
+            position: relative;
+            text-transform: lowercase;
+            color: white;
+              @include links;
+
+    }
+
+    @include clearfix;
+  }
+}
+
+@media (min-width : 320px) and (max-width : 768px) {
+  header {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 50%;
+  }
+
+   .menu {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+  }
+}
+  };

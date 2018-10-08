@@ -1,0 +1,34 @@
+@import '_variables.scss';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+};
+
+@include bodyheader;
+
+
+div {
+height: 100vh;
+color: white;
+
+    .headerphoto {
+      height: auto;
+      width: 100%;
+      text-align: center;
+      padding-top: 1%;
+
+
+      img {
+        height: auto;
+        width: 100%;
+        padding-bottom: 1%;
+      }
+
+      .lastp {
+        padding-bottom: 1%;
+      }
+      }
+
+}

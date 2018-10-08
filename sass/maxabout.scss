@@ -1,0 +1,53 @@
+@import '_variables.scss';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@include bodyheader;
+
+
+container {
+  width: 98vw;
+  display: flex;
+  flex-direction: row;
+
+  .textabout {
+    margin-top: 10%;
+    width: 49%;
+    font-size: 1.0em;
+    color: $fontColor;
+    align-self: center;
+  }
+
+
+  .photo {
+    width: 49%;
+    height: auto;
+    margin-top: 5%;
+    margin-left: 1%;
+
+    img {
+      width: 97%;
+    }
+  }
+}
+
+@media (min-width : 320px) and (max-width : 768px) {
+
+  container {
+    display: flex;
+    flex-direction: column;
+
+    .photo {
+      width: 100%;
+      padding-left: 0;
+
+    }
+    .textabout {
+      width: 100%;
+    }
+  }
+}
